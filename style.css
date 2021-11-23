@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    background-color: black;
+    image
+}
+
+.image1 {
+    width: 28rem;
+    height: 30rem;
+    border-radius: 50%;
+    display: flex;
+}
+
+.square{
+   width: 30rem;
+   height: 80rem;
+   background-color: rgb(255, 255, 255);
+   display: flex;
+   flex-direction: column;
+
+
+}
