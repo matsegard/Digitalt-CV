@@ -11,5 +11,11 @@ function addEventListeners() {
 
 function toggleMenu() {
    const dropDown = document.getElementById('drop-menu');
-   dropDown.style.
+   
+   if (dropDown.style.visibility === "hidden") {
+    dropDown.style.visibility = 'visible';
+} else {
+    dropDown.style.visibility = 'hidden';
 }
+}
+
