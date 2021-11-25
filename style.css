@@ -15,7 +15,7 @@ body {
     margin: 0;
     background: #000000;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #434343, #000000);
+    background: -webkit-linear-gradient(to bottom, #000000, #434343);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #434343, #000000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -77,6 +77,12 @@ h2:hover {
 .contact-button:hover {
     background-color: #fd9644;
 
+}
+
+.right-home{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 }
 
 .contact-button {
@@ -194,9 +200,10 @@ h2:hover {
     }
 
     #home p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-top: 2rem;
     }
+}
 
     /* MEDIA QUERIS */
     @media screen and (min-width: 800px) {
@@ -208,16 +215,15 @@ h2:hover {
             top: 0;
             margin-top: 0;
             width: 100%;
-            height: 4.5rem;
+            height: 4rem;
             font-size: 0.8rem;
             border-radius: 0;
         }
 
         #drop-menu h2 {
-            margin-right: 2rem;
-            float: left;
-            margin-top: -1.5rem;
-            align-self: center;
+            margin-right: 3rem;
+            float: right;
+            margin-top: -1.7rem;
         }
 
         #home h1 {
@@ -229,7 +235,7 @@ h2:hover {
             font-size: 1.6rem;
             margin-top: 2rem;
         }
-
+    }
 
         /* MEDIA QUERIS */
         @media screen and (min-width: 1000px) {
@@ -244,31 +250,29 @@ h2:hover {
                 display: flex;
                 flex-direction: column;
             }
-
-            .info {
-                margin-left: 15rem;
-                margin-top: 15rem;
-                display: flex;
-                flex-direction: row;
-
+            
+            #home h1 {
+                color: rgb(255, 255, 255);
+                font-size: 4rem;
+                margin-top: 7rem;
             }
-
-            .info h1 {
-                color: #fffefe;
-                font-size: 7rem;
-            }
-
-            .info p {
-                color: #fffefe;
-                margin-top: -1rem;
-                margin-bottom: 4rem;
-                text-align: center;
-                font-size: 3rem;
+        
+            #home p {
+                font-size: 1.7rem;
+                margin-top: 1rem;
+                align-items: flex-end;
             }
 
             .image1 {
-                width: 20rem;
-                height: 20rem;
+                width: 17rem;
+                height: 17rem;
                 border-radius: 50%;
-                margin: 3rem;
+                margin-top: 4rem;
             }
+
+            .contact-button{
+                margin-top: 2rem;
+                width: 12rem;
+                font-size: 1.2rem;
+            }
+        }
