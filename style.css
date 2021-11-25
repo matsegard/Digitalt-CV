@@ -8,7 +8,7 @@ html {
 
 a {
    text-decoration: none;
-   color: white;
+   color: #fffefe;
 }
 
 body {
@@ -23,7 +23,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 header {
@@ -38,7 +37,7 @@ h2:hover{
 }
 
 #drop-menu{
-    color: white;
+    color: #fffefe;
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
@@ -61,13 +60,16 @@ h2:hover{
 .material-icons {
     margin-right: 1rem;
     font-size: 2rem;
-    color: white;
+    color: #fffefe;
     z-index: 7;
     margin-top: 4rem;
     margin-right: 1rem;
     position:fixed;
 }
+.contact-button:hover {
+    background-color: #fd9644;
 
+}
 .contact-button {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
@@ -77,10 +79,11 @@ h2:hover{
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    border-radius: 2rem;
-    border: solid orange 1px;
+    border-radius: 1rem;
+    border: solid #fd9644 2px;
     background: transparent;
-    color: white;
+    color: #fffefe;
+    transition: ease-in 0.3s;
 }
 
 .image1 {
@@ -90,11 +93,11 @@ h2:hover{
     margin-top: 3rem;
 }
 
-.info span {
+#home span {
     color: #fd9644;
 }
 
-.info {
+#home {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -103,13 +106,13 @@ h2:hover{
     margin-top: 5rem;
 }
 
-.info h1 {
+#home h1 {
     color: rgb(255, 255, 255);
     font-size: 1.3rem;
 }
 
-.info p {
-    color: white;
+#home p {
+    color: #fffefe;
     text-align: center;
     font-size: 0.8rem;
     margin-top: 0.3rem;
@@ -123,14 +126,18 @@ h2:hover{
 
 #about-me{
     display: flex;
-    margin-top: 10rem;
+    margin-top: 20rem;
+}
+
+#contact-me{
+    display: flex;
 }
 
 @media screen and (min-width: 600px) {
     
     #drop-menu{
         background: transparent;
-        position: absolute;
+        position: fixed;
         right: 0 !important;
         left: auto !important;
         top: 0;
@@ -172,12 +179,12 @@ h2:hover{
     }
 
     .info h1 {
-        color: white;
+        color: #fffefe;
         font-size: 7rem;
     }
 
     .info p {
-        color: white;
+        color: #fffefe;
         margin-top: -1rem;
         margin-bottom: 4rem;
         text-align: center;
@@ -201,7 +208,7 @@ h2:hover{
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: white;
+        color: #fffefe;
     }
 
     #contact-list {
