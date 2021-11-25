@@ -7,6 +7,9 @@ function main() {
 function addEventListeners() {
     const menuButton = document.getElementById('menu-button');
     menuButton.addEventListener('click', toggleMenu);
+
+    const contactButton = document.getElementById("about-me-page");
+    contactButton.addEventListener('click', showAboutMePage)
 }
 
 function toggleMenu() {
@@ -18,4 +21,15 @@ function toggleMenu() {
     dropDown.style.display = 'none';
 }
 }
+
+function showAboutMePage(){
+   const elmnt = document.getElementById('about-me');
+   
+   elmnt.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+    }
+
 
