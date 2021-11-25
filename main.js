@@ -9,16 +9,21 @@ function addEventListeners() {
     menuButton.addEventListener('click', toggleMenu);
 
     const homeClick = document.getElementById('home-page');
-    homeClick.addEventListener('click', showHomePage);
+    homeClick.addEventListener('click',  scrollToHomeSection);
     homeClick.addEventListener('click', hideNavbar);
 
     const aboutMeClick = document.getElementById('about-me-page');
-    aboutMeClick.addEventListener('click', showAboutMePage);
+    aboutMeClick.addEventListener('click', scrollToAboutMeSection);
     aboutMeClick.addEventListener('click', hideNavbar);
     
     const contactClick = document.getElementById('contact-page');
-    contactClick.addEventListener('click', showContactPage);
+    contactClick.addEventListener('click', scrollToContactSection);
     contactClick.addEventListener('click', hideNavbar);
+
+    const portfolioClick = document.getElementById('portfolio-page');
+    portfolioClick.addEventListener('click', scrollToPortfolioSection);
+    portfolioClick.addEventListener('click', hideNavbar);
+   
 }
 
 function toggleMenu() {
@@ -36,29 +41,38 @@ function hideNavbar() {
     dropmenu.style.display = 'none'
 }
 
-function showHomePage() {
-    const scrollToHome = document.getElementById('header');
+function scrollToHomeSection() {
+    const homeSection = document.getElementById('header');
 
-    scrollToHome.scrollIntoView({
+   homeSection.scrollIntoView({
         behavior: "smooth",
         block: "start",
     });
 }
 
-function showAboutMePage() {
-    const scrollToAboutMe = document.getElementById('about-me');
+function scrollToAboutMeSection() {
+    const aboutMeSection = document.getElementById('about-me');
 
-    scrollToAboutMe.scrollIntoView({
+    aboutMeSection.scrollIntoView({
         
         behavior: "smooth",
         block: "start",
     });
 }
 
-function showContactPage() {
-    scrollToContactPage = document.getElementById('contact-me');
+function scrollToContactSection() {
+    const contactSection = document.getElementById('contact-me');
+    
+    contactSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+    });
+}
 
-    scrollToContactPage.scrollIntoView({
+function scrollToPortfolioSection() {
+    const portfolioSection = document.getElementById('portfolio');
+
+    portfolioSection.scrollIntoView({
         behavior: "smooth",
         block: "start",
     });

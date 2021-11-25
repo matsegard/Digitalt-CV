@@ -66,6 +66,7 @@ h2:hover{
     margin-right: 1rem;
     position:fixed;
 }
+
 .contact-button:hover {
     background-color: #fd9644;
 
@@ -124,14 +125,15 @@ h2:hover{
     display: none;
 }
 
-#about-me{
+#about-me, #contact-me, #portfolio{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 20rem;
+    color: #fffefe;
 }
 
-#contact-me{
-    display: flex;
-}
 
 @media screen and (min-width: 600px) {
     
