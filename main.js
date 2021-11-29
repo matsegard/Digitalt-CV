@@ -11,25 +11,29 @@ function addEventListeners() {
     const aboutMeClick = document.getElementById('about-me-page');
     const contactClick = document.getElementById('contact-page');
     const portfolioClick = document.getElementById('portfolio-page');
-    
+
     menuButton.addEventListener('click', toggleIcon);
-    
+
     menuButton.addEventListener('click', toggleMenu);
 
     homeClick.addEventListener('click', scrollToHomeSection);
     homeClick.addEventListener('click', hideNavbar);
+    homeClick.addEventListener('click', toggleIcon);
 
 
     aboutMeClick.addEventListener('click', scrollToAboutMeSection);
     aboutMeClick.addEventListener('click', hideNavbar);
+    aboutMeClick.addEventListener('click', toggleIcon);
 
 
     contactClick.addEventListener('click', scrollToContactSection);
-    contactClick.addEventListener('click', hideNavbar);
+    contactClick.addEventListener('click', hideNavbar); 
+    contactClick.addEventListener('click', toggleIcon);
 
 
     portfolioClick.addEventListener('click', scrollToPortfolioSection);
     portfolioClick.addEventListener('click', hideNavbar);
+    portfolioClick.addEventListener('click', toggleIcon);
 
 }
 
@@ -45,7 +49,7 @@ function toggleMenu() {
 
 function hideNavbar() {
     const dropmenu = document.getElementById('drop-menu');
-    dropmenu.style.display = 'none'
+    dropmenu.style.display = 'none';
 }
 
 function scrollToHomeSection() {
@@ -85,14 +89,12 @@ function scrollToPortfolioSection() {
     });
 }
 
-function toggleIcon (){
+function toggleIcon() {
     const iconChange = document.getElementById("menu-button");
-    
-     if(iconChange.innerHTML === 'menu'){
-       iconChange.innerHTML = 'close';
-     } else {
-        iconChange.innerHTML = 'menu';
-     }
-}
 
-    
+    if (iconChange.innerHTML === 'menu') {
+        iconChange.innerHTML = 'close';
+    } else {
+        iconChange.innerHTML = 'menu';
+    }
+}
