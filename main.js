@@ -67,7 +67,7 @@ function scrollToAboutMeSection() {
     aboutMeSection.scrollIntoView({
 
         behavior: "smooth",
-        block: "start",
+        block: "center",
     });
 }
 
@@ -76,7 +76,7 @@ function scrollToContactSection() {
 
     contactSection.scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: "center",
     });
 }
 
@@ -85,7 +85,7 @@ function scrollToPortfolioSection() {
 
     portfolioSection.scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: "center",
     });
 }
 

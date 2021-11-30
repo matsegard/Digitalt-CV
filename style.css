@@ -17,7 +17,7 @@ body {
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #000000, #434343);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #434343, #000000);
+    background: linear-gradient(to bottom, #292929, #000000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -39,7 +39,7 @@ header {
     margin-bottom: 2.2rem;
 }
 
-h2:hover {
+header h2:hover {
     color: #fd9644;
 }
 
@@ -103,8 +103,13 @@ h2:hover {
 .image1 {
     width: 15rem;
     height: 15rem;
-    border-radius: 50%;
+    border-radius: 10%;
     margin-top: 3rem;
+}
+
+main h2{
+    color: #fd9644;
+    font-size: 1.3rem;
 }
 
 #home span {
@@ -137,6 +142,10 @@ h2:hover {
     display: none;
 }
 
+#contact-me a:hover{
+    color: #fd9644;
+}
+
 #about-me,
 #contact-me,
 #portfolio {
@@ -146,8 +155,8 @@ h2:hover {
     align-items: center;
     margin-top: 30rem;
     color: #fffefe;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
     font-size: 1rem;
 }
 
@@ -174,20 +183,6 @@ h2:hover {
 /* MEDIA QUERIS */
 @media screen and (min-width: 600px) {
 
-    #drop-menu {
-        background: transparent;
-        position: fixed;
-        right: 0;
-        left: auto;
-        top: 0;
-        z-index: 1;
-        padding-top: 3rem;
-        margin-top: 2rem;
-        padding-left: 2rem;
-        height: 16rem;
-        font-size: 0.8rem;
-    }
-
     #drop-menu h2 {
         margin-bottom: 2.2rem;
     }
@@ -208,15 +203,14 @@ h2:hover {
     @media screen and (min-width: 800px) {
 
         #drop-menu {
-            background: black;
+            background: transparent;
             position: fixed;
             z-index: 1;
             top: 0;
-            margin-top: 0;
+            padding-top: 3rem;
             width: 100%;
             height: 4rem;
             font-size: 0.8rem;
-            border-radius: 0;
         }
 
         #drop-menu h2 {
@@ -247,12 +241,12 @@ h2:hover {
 
             #home {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
             }
             
             #home h1 {
                 color: rgb(255, 255, 255);
-                font-size: 4rem;
+                font-size: 3rem;
                 margin-top: 7rem;
             }
         
@@ -263,10 +257,11 @@ h2:hover {
             }
 
             .image1 {
-                width: 17rem;
-                height: 17rem;
+                width: 20rem;
+                height: 20rem;
                 border-radius: 50%;
                 margin-top: 4rem;
+                margin-left: 5rem;
             }
 
             .contact-button{
