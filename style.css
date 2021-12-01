@@ -41,10 +41,11 @@ header {
 
 header h2:hover {
     color: #fd9644;
+    cursor: pointer;
 }
 
 #drop-menu {
-    color: #fffefe;
+    color: #eeeded;
     background: #000000;
     right: 0;
     top: 0;
@@ -61,24 +62,24 @@ header h2:hover {
 
 #menu-button:hover {
     color: #fd9644;
+    cursor: pointer;
 }
 
-
 .material-icons {
-    margin-right: 1rem;
     font-size: 2rem;
     color: #fffefe;
     z-index: 7;
     margin-top: 4rem;
-    margin-right: 1rem;
+    margin-right: 1.2rem;
     position: fixed;
 }
 
 .contact-button:hover {
-    background-color: #fd9644;
+    box-shadow: 0 0 60px 60px #fd9644 inset;
+    cursor: pointer;
 }
 
-.right-home{
+.home-text {
     align-items: center;
     flex-direction: column;
     display: flex;
@@ -103,11 +104,11 @@ header h2:hover {
 .image1 {
     width: 15rem;
     height: 15rem;
-    border-radius: 10%;
+    border-radius: 50%;
     margin-top: 3rem;
 }
 
-main h2{
+main h2 {
     color: #fd9644;
     font-size: 1.3rem;
 }
@@ -126,7 +127,7 @@ main h2{
 }
 
 #home h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(240, 240, 240);
     font-size: 1.3rem;
 }
 
@@ -137,13 +138,22 @@ main h2{
     margin-bottom: 3rem;
 }
 
-.contact-list {
-    list-style: none;
-    display: none;
+#contact-me a:hover {
+    -webkit-mask-image: linear-gradient(-75deg, #fd9644  30%, #fd9644 50%, rgb(253, 150, 68, 0) 100%);
+    -webkit-mask-size: 200%;
+    -webkit-text-fill-color: #fd9644 ;
+    animation: shine 2s infinite;
+    cursor: pointer;
 }
 
-#contact-me a:hover{
-    color: #fd9644;
+@-webkit-keyframes shine {
+    from {
+        -webkit-mask-position: 150%;
+    }
+
+    to {
+        -webkit-mask-position: -50%;
+    }
 }
 
 #about-me,
@@ -158,7 +168,14 @@ main h2{
     margin-left: 3rem;
     margin-right: 3rem;
     font-size: 1rem;
+    text-align: center;
+    line-height: 1.7;
 }
+
+#portfolio {
+    margin-bottom: 10rem;
+}
+
 
 /* MEDIA QUERIS */
 @media screen and (min-width: 400px) {
@@ -168,16 +185,19 @@ main h2{
         margin-top: 4rem;
     }
 
+    #home {
+        margin-top: 3rem;
+    }
+
     #home p {
         font-size: 1.2rem;
         margin-top: 2rem;
     }
 
     .image1 {
-        width: 20rem;
-        height: 20rem;
+        width: 16rem;
+        height: 16rem;
     }
-
 }
 
 /* MEDIA QUERIS */
@@ -197,76 +217,112 @@ main h2{
         font-size: 1.3rem;
         margin-top: 2rem;
     }
-}
 
-    /* MEDIA QUERIS */
-    @media screen and (min-width: 800px) {
-
-        #drop-menu {
-            background: transparent;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            padding-top: 3rem;
-            width: 100%;
-            height: 4rem;
-            font-size: 0.8rem;
-        }
-
-        #drop-menu h2 {
-            margin-right: 3rem;
-            float: right;
-            margin-top: -1.7rem;
-        }
-
-        #home h1 {
-            font-size: 2.8rem;
-            margin-top: 6rem;
-        }
-
-        #home p {
-            font-size: 1.6rem;
-            margin-top: 2rem;
-        }
+    #contact-me h2,
+    #about-me h2,
+    #contact-me h2,
+    #portfolio h2 {
+        font-size: 1.6rem;
     }
 
-        /* MEDIA QUERIS */
-        @media screen and (min-width: 1000px) {
+    #contact-me p {
+        font-size: 1.2rem;
+    }
+}
 
-            main {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
+/* MEDIA QUERIS */
+@media screen and (min-width: 800px) {
 
-            #home {
-                display: flex;
-                flex-direction: row;
-            }
-            
-            #home h1 {
-                color: rgb(255, 255, 255);
-                font-size: 3rem;
-                margin-top: 7rem;
-            }
-        
-            #home p {
-                font-size: 1.7rem;
-                margin-top: 1rem;
-                align-items: flex-end;
-            }
+    #about-me {
+        width: 40rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
 
-            .image1 {
-                width: 20rem;
-                height: 20rem;
-                border-radius: 50%;
-                margin-top: 4rem;
-                margin-left: 5rem;
-            }
+    #drop-menu {
+        background: transparent;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        padding-top: 3rem;
+        width: 100%;
+        height: 4rem;
+        font-size: 0.8rem;
+    }
 
-            .contact-button{
-                margin-top: 2rem;
-                width: 12rem;
-                font-size: 1.2rem;
-            }
-        }
+    #drop-menu h2 {
+        margin-right: 3rem;
+        float: right;
+        margin-top: -1.7rem;
+    }
+
+    #home h1 {
+        font-size: 2.8rem;
+        margin-top: 6rem;
+    }
+
+    #home {
+        margin-top: 1rem;
+    }
+
+    #home p {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+
+    #contact-me h2,
+    #about-me h2,
+    #contact-me h2,
+    #portfolio h2 {
+        font-size: 2rem;
+    }
+
+    #contact-me p {
+        font-size: 1.4rem;
+    }
+}
+
+/* MEDIA QUERIS */
+@media screen and (min-width: 1000px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #home h1 {
+        color: rgb(255, 255, 255);
+        font-size: 3rem;
+        margin-top: 7rem;
+    }
+
+    #home p {
+        font-size: 1.7rem;
+        margin-top: 1rem;
+        align-items: flex-end;
+    }
+
+    .image1 {
+        width: 20rem;
+        height: 23rem;
+        border-radius: 2%;
+        margin-top: 10rem;
+        margin-left: 5rem;
+    }
+
+    .contact-button {
+        margin-top: 2rem;
+        width: 12rem;
+        font-size: 1.2rem;
+    }
+
+    #about-me {
+        width: 60rem;
+    }
+}
