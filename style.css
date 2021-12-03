@@ -106,13 +106,7 @@ header h2:hover {
     height: 15rem;
     border-radius: 50%;
     margin-top: 3rem;
-    transition: transform .3s ease-in-out;
 }
-
-.image1:hover {
-    transform: rotate(1deg);
-}
-
 
 main h2 {
     color: #fd9644;
@@ -160,6 +154,10 @@ main h2 {
     to {
         -webkit-mask-position: -100%;
     }
+}
+
+#contact-me p:first-of-type{
+    font-size: 1.2rem;
 }
 
 #about-me,
@@ -231,6 +229,10 @@ main h2 {
     #portfolio h2 {
         font-size: 1.3rem;
     }
+    
+    #contact-me p:first-of-type{
+        font-size: 1.2rem;
+    }
 
 }
 
@@ -272,12 +274,17 @@ main h2 {
         transition: transform .3s ease-in-out;
     }
     .my-work1:hover{
-        transform: rotate(2deg);
+        transform: rotate(1deg);
+    }
+
+    .my-work2:hover{
+        transform: rotate(-1deg);
     }
     
-    .my-work2:hover{
-        transform: rotate(-2deg);
+    #contact-me p:first-of-type{
+        font-size: 1.4rem;
     }
+
 }
 
 /* MEDIA QUERIS */
@@ -331,6 +338,10 @@ main h2 {
     #contact-me p {
         font-size: 1.4rem;
     }
+   
+    #contact-me p:first-of-type{
+        font-size: 1.6rem;
+    }
 }
 
 /* MEDIA QUERIS */
@@ -365,7 +376,7 @@ main h2 {
         border-radius: 1%;
         margin-top: 10rem;
         margin-left: 5rem;
-        box-shadow: 20px 20px 0px #fd9644;
+        box-shadow: 20px 20px 0px rgba(253, 150, 68, 0.8);
     }
 
     .contact-button {

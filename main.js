@@ -5,6 +5,7 @@ function main() {
     addEventListeners();
 }
 
+/** Adding eventlisteners on all the buttons in header **/
 function addEventListeners() {
     const menuButton = document.getElementById('menu-button');
     const homeClick = document.getElementById('home-page');
@@ -36,6 +37,7 @@ function addEventListeners() {
 
 }
 
+/** Shows dropdown navbar when clicking on hamburger icon and hides it when clicking on the x icon  */
 function toggleMenu() {
     const dropDown = document.getElementById('drop-menu');
 
@@ -46,11 +48,24 @@ function toggleMenu() {
     }
 }
 
+/** Changes hamburger icon to x icon when clicking on it */
+function toggleIcon() {
+    const iconChange = document.getElementById("menu-button");
+
+    if (iconChange.innerHTML === 'menu') {
+        iconChange.innerHTML = 'close';
+    } else {
+        iconChange.innerHTML = 'menu';
+    }
+}
+
+/** Hides the dropdown navbar when clicking on something in the navbar */
 function hideNavbar() {
     const dropmenu = document.getElementById('drop-menu');
     dropmenu.style.display = 'none';
 }
 
+/** Scrolls to the home section of the page when clicking on Home */
 function scrollToHomeSection() {
     const homeSection = document.getElementById('header');
 
@@ -60,6 +75,7 @@ function scrollToHomeSection() {
     });
 }
 
+/** Scrolls to the about me section of the page when clicking on About */
 function scrollToAboutMeSection() {
     const aboutMeSection = document.getElementById('about-me');
 
@@ -70,6 +86,7 @@ function scrollToAboutMeSection() {
     });
 }
 
+/** Scrolls to the contact me section of the page when clicking on Contact */
 function scrollToContactSection() {
     const contactSection = document.getElementById('contact-me');
 
@@ -79,6 +96,7 @@ function scrollToContactSection() {
     });
 }
 
+/** Scrolls to the portfolio section of the page when clicking on Portfolio */
 function scrollToPortfolioSection() {
     const portfolioSection = document.getElementById('portfolio');
 
@@ -86,14 +104,4 @@ function scrollToPortfolioSection() {
         behavior: "smooth",
         block: "start",
     });
-}
-
-function toggleIcon() {
-    const iconChange = document.getElementById("menu-button");
-
-    if (iconChange.innerHTML === 'menu') {
-        iconChange.innerHTML = 'close';
-    } else {
-        iconChange.innerHTML = 'menu';
-    }
 }
