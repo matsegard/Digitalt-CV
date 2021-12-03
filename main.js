@@ -13,7 +13,6 @@ function addEventListeners() {
     const portfolioClick = document.getElementById('portfolio-page');
 
     menuButton.addEventListener('click', toggleIcon);
-
     menuButton.addEventListener('click', toggleMenu);
 
     homeClick.addEventListener('click', scrollToHomeSection);
