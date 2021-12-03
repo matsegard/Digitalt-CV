@@ -102,6 +102,6 @@ function scrollToPortfolioSection() {
 
     portfolioSection.scrollIntoView({
         behavior: "smooth",
-        block: "start",
+        block: "center",
     });
 }
